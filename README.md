@@ -1,6 +1,6 @@
 # Infratech-Traffic-Count-and-Classification-Application
 
-Traffic Count and Classification Application is an application to be offered by us in 
+**Traffic Count and Classification Application** is an application to be offered by us in 
 support of Classifying and tracking flow across multiple classes of Transport vehicles 
 over visual data.
 
@@ -32,6 +32,13 @@ Total Annotated Night-Time Images: 27,575
 The data is pre-processed in Darknet ‘.txt’ Yolo Format within the following 17 Classes 
 using LabelImg Tool. Below are the Classes name mentioned along with their net count.
 
+![Table I](https://user-images.githubusercontent.com/75173703/115763065-be339800-a3c1-11eb-8e3a-cb0129d53257.PNG)
+
+_‘*’ represents classes included in a special set of 9 Classes_
+
+![Image I](https://user-images.githubusercontent.com/75173703/115763108-ca1f5a00-a3c1-11eb-93a9-1ae5de96cbfd.PNG)
+
+
 # DIGITAL IMAGE PROCESSING
 
 ## Technique I : Contrast Enhancement
@@ -41,10 +48,14 @@ We have used OpenCV Library in Python to :
 - Apply Histogram equalization for contrast improvement.
 - Apply Contrast Limited Adaptive Histogram Equalization (CLAHE) to take care of over-amplification of contrast (to equalize image).
 
+![Image II](https://user-images.githubusercontent.com/75173703/115763308-f8049e80-a3c1-11eb-8950-123c8de157ff.PNG)
+![Image II - Subtext](https://user-images.githubusercontent.com/75173703/115763314-f935cb80-a3c1-11eb-97e7-a367525a8e96.PNG)
+
 The technique did enhance the contrast in both night and day time images. However, 
 this led to enhancement of features in areas of low intensity and decrease of features 
 in area of high intensity. Due to Extreme focus on contrast enhancement, additional 
 noise in the form of white glare were imposed on night-time images.
+
 
 ## Technique II : Glare Reduction
 
@@ -56,15 +67,22 @@ We have used OpenCV Library in Python to :
 - Masking white patches, enhacing the contrast and the brightness surrounding the patches of high-intensity pixels.
 - Finally, denoising the image again while adjusting contrast using ‘fastN1MeansDenoising’.
 
+![Image III 1](https://user-images.githubusercontent.com/75173703/115763395-0d79c880-a3c2-11eb-95e1-21d25af4b554.PNG)
+![Image III 2](https://user-images.githubusercontent.com/75173703/115764629-6c8c0d00-a3c3-11eb-8827-e1aaf712bc45.PNG)
+
 The technique enhanced the image contrast as well as enhanced the Glare in nigh time Images. However, the enhancements were very low to consider and are image dependent.
 
 # Yolov5
+
+![Yolov5 Blog](https://blog.roboflow.com/yolov5-improvements-and-evaluation/)
 
 ‘Table II’ represents the details regarding the training experiments carries out. All experiments were carried out using Batch Size of 16 Images, Image Dimensions of 640x640, 100 epochs and train-test ratio equal to 0.3.
 
 Experiments with ‘*’ show that the model was trained on 9 Classes. (Referring from ‘Table I’ as Class Index Numbers: 1, 2, 4, 6, 7, 8, 9, 10, 12).
 
-Experiments with ‘*’* show that the model was trained on Day 17 Classes and Night 9 Classes Mix.
+Experiments with ‘**’ show that the model was trained on Day 17 Classes and Night 9 Classes Mix.
+
+![Table II](https://user-images.githubusercontent.com/75173703/115763451-1a96b780-a3c2-11eb-904f-ad26527589a4.PNG)
 
 # Yolov5 Training Conclusions
 
