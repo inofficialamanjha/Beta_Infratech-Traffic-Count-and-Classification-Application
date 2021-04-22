@@ -1,0 +1,17 @@
+cycle
+twowheeler
+cyclerickshaw
+erickshaw
+handcart
+auto
+commercialauto
+fourwheeler
+minilcv
+lcv
+minibus
+bus
+twoaxle
+threeaxle
+moreaxle
+hcm
+farmtractorwith
