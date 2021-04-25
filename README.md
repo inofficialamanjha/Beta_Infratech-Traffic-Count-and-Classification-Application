@@ -1,6 +1,6 @@
 # Infratech-Traffic-Count-and-Classification-Application
 
-**Traffic Count and Classification Application** is an application to be offered by us in 
+**Traffic Count and Classification Application** is an application to be offered by **Xero Technologies** in 
 support of Classifying and tracking flow across multiple classes of Transport vehicles 
 over visual data.
 
